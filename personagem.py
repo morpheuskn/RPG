@@ -1,4 +1,4 @@
-import random
+import random as r
 
 def nome():
     nomepersonagem = input("Digite o Nome do Personagem: ")
@@ -48,98 +48,97 @@ def atributos(raca, classe):
         "Guardião": {"Força": 0, "Destreza": 1, "Constituição": 0, "Inteligência": 1, "Sabedoria": 1, "Carisma": 0}
     }
 
-    
-    atributos_totais = {}
+    atributostotais = {}
     for atributo in atributosraca[raca]:
         atributostotais[atributo] = atributosraca[raca][atributo] + atributosclasse[classe][atributo]
 
     if classe == "Guerreiro":
-        HP = random.randint(20, 25) + atributostotais["Constituição"]
-        DEF = random.randint(25, 30) + atributostotais["Destreza"]
-        ATK = random.randint(4, 8) + atributostotais["Força"] + atributos_totais["Destreza"]
-        MAG = atributos_totais["Inteligência"] + atributostotais["Carisma"]
-        atributosjogador = {"HP":HP, "DEF":DEF, "ATK": ATK, "MAG":MAG}
-        print(f"HP: {HP}, DEF: {DEF}, ATK: {ATK}, MAG: {MAG}")
-        
-
-     if classe == "Feiticeiro":
-        HP = random.randint(15, 20) + atributostotais["Constituição"]
-        DEF = random.randint(20, 25) + atributostotais["Destreza"]
-        ATK = atributos_totais["Força"]
-        MAG = random.randint(10, 15) +  atributostotais["Inteligência"] + atributostotais["Carisma"]
-        atributosjogador = {"HP":HP, "DEF":DEF, "ATK": ATK, "MAG":MAG}
+        HP = r.randint(20, 25) + atributostotais["Constituição"]
+        DEF = r.randint(25, 30) + atributostotais["Destreza"]
+        ATK = r.randint(4, 8) + atributostotais["Força"] + atributostotais["Destreza"]
+        MAG = atributostotais["Inteligência"] + atributostotais["Carisma"]
+        atributosjogador = {"HP": HP, "DEF": DEF, "ATK": ATK, "MAG": MAG}
         print(f"HP: {HP}, DEF: {DEF}, ATK: {ATK}, MAG: {MAG}")
 
-
-     if classe == "Ladino":
-        HP = random.randint(20, 25) + atributostotais["Constituição"]
-        DEF = random.randint(20, 25) + atributostotais["Destreza"]
-        ATK = random.randint(4, 8) + atributostotais["Força"] + atributostotais["Inteligência"]
-        MAG = atributos_totais["Inteligência"] + atributostotais["Carisma"] + atributostotais["Sabedoria"]
-        atributosjogador = {"HP":HP, "DEF":DEF, "ATK": ATK, "MAG":MAG}
+    elif classe == "Feiticeiro":
+        HP = r.randint(15, 20) + atributostotais["Constituição"]
+        DEF = r.randint(20, 25) + atributostotais["Destreza"]
+        ATK = atributostotais["Força"]
+        MAG = r.randint(10, 15) + atributostotais["Inteligência"] + atributostotais["Carisma"]
+        atributosjogador = {"HP": HP, "DEF": DEF, "ATK": ATK, "MAG": MAG}
         print(f"HP: {HP}, DEF: {DEF}, ATK: {ATK}, MAG: {MAG}")
 
+    elif classe == "Ladino":
+        HP = r.randint(20, 25) + atributostotais["Constituição"]
+        DEF = r.randint(20, 25) + atributostotais["Destreza"]
+        ATK = r.randint(4, 8) + atributostotais["Força"] + atributos_totais["Inteligência"]
+        MAG = atributostotais["Inteligência"] + atributostotais["Carisma"] + atributostotais["Sabedoria"]
+        atributosjogador = {"HP": HP, "DEF": DEF, "ATK": ATK, "MAG": MAG}
+        print(f"HP: {HP}, DEF: {DEF}, ATK: {ATK}, MAG: {MAG}")
 
-     if classe == "Guardião":
-        HP = random.randint(15, 20) + atributostotais["Constituição"]
-        DEF = random.randint(15, 20) + atributostotais["Destreza"]
-        ATK = random.randint(4, 8) + atributostotais["Força"] + atributostotais["Destreza"]
-        MAG = random.randint(8, 12) + atributostotais["Inteligência"] + atributostotais["Sabedoria"]
-        atributosjogador = {"HP":HP, "DEF":DEF, "ATK": ATK, "MAG":MAG}
+    elif classe == "Guardião":
+        HP = r.randint(15, 20) + atributostotais["Constituição"]
+        DEF = r.randint(15, 20) + atributostotais["Destreza"]
+        ATK = r.randint(4, 8) + atributostotais["Força"] + atributostotais["Destreza"]
+        MAG = r.randint(8, 12) + atributostotais["Inteligência"] + atributostotais["Sabedoria"]
+        atributosjogador = {"HP": HP, "DEF": DEF, "ATK": ATK, "MAG": MAG}
         print(f"HP: {HP}, DEF: {DEF}, ATK: {ATK}, MAG: {MAG}")
 
     return atributosjogador
 
-
-def jogador(nome,raca,classe,atributos):
+def jogador(nome, raca, classe, atributos):
     fichajogador = {}
-    atributos = atributosjogador
     if classe == "Guerreiro":
-        fichajogador = {"Nome":nome,"Raça":raca,"Classe":classe,"Atributos":atributos,"Arma":"Espada"}
+        fichajogador = {"Nome": nome, "Raça": raca, "Classe": classe, "Atributos": atributos, "Arma": "Espada"}
 
-    if classe == "Feiticeiro":
-        fichajogador = {"Nome":nome,"Raça":raca,"Classe":classe,"Atributos":atributos,"Arma":"Missil Magico"}
+    elif classe == "Feiticeiro":
+        fichajogador = {"Nome": nome, "Raça": raca, "Classe": classe, "Atributos": atributos, "Arma": "Missil Magico"}
 
-    if classe == "Ladino":
-        fichajogador = {"Nome":nome,"Raça":raca,"Classe":classe,"Atributos":atributos,"Arma":"Adaga"}
+    elif classe == "Ladino":
+        fichajogador = {"Nome": nome, "Raça": raca, "Classe": classe, "Atributos": atributos, "Arma": "Adaga"}
 
-    if classe == "Guardião":
-        fichajogador = {"Nome":nome,"Raça":raca,"Classe":classe,"Atributos":atributos,"Arma":"Arco"}
+    elif classe == "Guardião":
+        fichajogador = {"Nome": nome, "Raça": raca, "Classe": classe, "Atributos": atributos, "Arma": "Arco"}
 
     return fichajogador
 
-
 def mochila(item):
     itens = []
-    for lista in itens:
-        lista = objeto,quantidade
-        if item in itens:
+    quantidade = 0
+    for objeto in itens:
+        if objeto[0] == item:
             quantidade += 1
-        elif item not in itens:
-            itens.append([item,1])
+            objeto[1] = quantidade
+            break
+    else:
+        itens.append([item, 1])
     return itens
 
-
-
-        
-    
-
-
-
-
-
-
-
-
-
-
 def morte():
-    print ("Você Morreu")
-    menu()
-
-
-
+    print("Você Morreu")
     
 
+def ataque(atacante, defensor):
+    dano = max(atacante["Atributos"]["ATK"] - defensor["Atributos"]["DEF"], 0)
+    defensor["Atributos"]["HP"] -= dano
+    return dano
 
+def combate(jogador, inimigo):
+    print(f"Iniciando combate entre {jogador['Nome']} e {inimigo['Nome']}!")
     
+    while jogador["Atributos"]["HP"] > 0 and inimigo["Atributos"]["HP"] > 0:
+        dano = ataque(jogador, inimigo)
+        print(f"{jogador['Nome']} ataca {inimigo['Nome']} causando {dano} de dano.")
+        print(f"{inimigo['Nome']} tem {inimigo['Atributos']['HP']} HP restantes.")
+        
+        if inimigo["Atributos"]["HP"] <= 0:
+            print(f"{inimigo['Nome']} foi derrotado!")
+            break
+        
+        dano = ataque(inimigo, jogador)
+        print(f"{inimigo['Nome']} ataca {jogador['Nome']} causando {dano} de dano.")
+        print(f"{jogador['Nome']} tem {jogador['Atributos']['HP']} HP restantes.")
+        
+        if jogador["Atributos"]["HP"] <= 0:
+            print(f"{jogador['Nome']} foi derrotado!")
+            break
