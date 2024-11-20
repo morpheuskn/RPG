@@ -102,17 +102,28 @@ def jogador(nome, raca, classe, atributos):
 
     return fichajogador
 
-def mochila(item):
-    itens = []
+def adicionarmochila(item):
+    mochila = []
     quantidade = 0
-    for objeto in itens:
+    for objeto in mochila:
         if objeto[0] == item:
             quantidade += 1
             objeto[1] = quantidade
             break
     else:
-        itens.append([item, 1])
-    return itens
+        mochila.append([item, 1])
+        print(f"{item} foi adicionado a sua mochila.")
+    return mochila
+
+def mostrarmochila():
+    mochila = adicionarmochila(item)
+    if mochila:
+        print("Mochila:")
+        for item in mochila:
+            print(f"- {item}")
+    else:
+        print("Sua Mochila está vazio.")
+
 
 def morte():
     print("Você Morreu")

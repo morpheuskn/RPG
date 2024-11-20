@@ -1,5 +1,8 @@
 import personagem as p
 import salvamento as s
+import historia as h
+import escolha as e
+import resposta as r
 
 def menu():
     print("A Aventura")
