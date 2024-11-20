@@ -1,13 +1,13 @@
-''' Importa o módulo Random como a variável r. '''
+""" Importa o módulo Random como a variável r. """
 import random as r
 
-''' Função nome é responsável por criar o nome do personagem do jogador '''
+""" Função nome é responsável por criar o nome do personagem do jogador """
 
 def nome():
     nomepersonagem = input("Digite o Nome do Personagem: ")
     return nomepersonagem
 
-''' Função raça é responsável pela escolha da raça'''
+""" Função raça é responsável pela escolha da raça """
 
 def raca():
     racas = {1: "Humano", 2: "Elfo", 3: "Anão", 4: "Hobbit"}
@@ -23,7 +23,7 @@ def raca():
     print(f"A raça Escolhida foi: {racapersonagem}")
     return racapersonagem
 
-''' Função classe é responsável pela escolha da classe do personagem '''
+""" Função classe é responsável pela escolha da classe do personagem """
 
 def classe():
     classes = {1: "Guerreiro", 2: "Feiticeiro", 3: "Ladino", 4: "Guardião"}
@@ -92,6 +92,8 @@ def atributos(raca, classe):
         print(f"HP: {HP}, DEF: {DEF}, ATK: {ATK}, MAG: {MAG}")
 
     return atributosjogador
+
+""" Função jogador concatena as escolhas de características do jogador em uma lista """
 
 def jogador(nome, raca, classe, atributos):
     fichajogador = {}
