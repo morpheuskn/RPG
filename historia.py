@@ -1,117 +1,123 @@
-capitulo1 = print("Capítulo 1: A Cidade de Willowdale \n\
-Você chega à cidade de Willowdale, um centro comercial vibrante.\n\
-Rumores de um artefato poderoso escondido nas ruínas da antiga cidade de El'goroth atraem aventureiros.\n\
-Você ouve:\n\
-Anunciante Real: Viajante aproxime-se, está atrás de fama e fortuna nas ruinas da morte também ?\n\
-Você: Fale-me mais sobre o que faz de tais ruinas tão tenebrosas.\n\
-Anunciante Real: Caro viajante, as ruinas em El'goroth fizeram muitas vitimas, de lá saem monstros horrendos.\n\
-Muitos valentes com patrocinio real tentaram, mas a unica coisa que conseguiram foi serem dilacerados.\n\
-Então me diga aceita tal tarefa ?")
+capitulo1 = """Capítulo 1: A Cidade de Willowdale
+Você chega à cidade de Willowdale, um centro comercial vibrante. 
+Rumores de um artefato poderoso escondido nas ruínas da antiga cidade de El'goroth atraem aventureiros. 
+Você ouve: 
+Anunciante Real: Viajante, aproxime-se! Está atrás de fama e fortuna nas ruínas da morte também? 
+Você: Fale-me mais sobre o que torna essas ruínas tão tenebrosas. 
+Anunciante Real: Caro viajante, as ruínas em El'goroth fizeram muitas vítimas. De lá saem monstros horrendos. 
+Muitos valentes, com patrocínio real, tentaram, mas a única coisa que conseguiram foi serem dilacerados. 
+Então me diga, aceita tal tarefa?"""
 
-capitulo2 = print("Capitulo 2: No Caminho do Castelo \n\
-Após a conversa com o anuciante real, você se dirige para o castelo no centro de Willowdale.\n\
-Andando pelas ruas da cidade, do porto até o centro. Nesse caminho, você começa a ouvir rumores.\n\
-Você ouve dois comerciantes de fora, falando sobre uma caravana cujos membros foram todos mortos pelos monstros,\n\
-exceto uma pessoa, cujo o paradeiro não é sabido. Depois de ouvir a conversa, você cotinua a se dirigir ao castelo.\n\
-Ao chegar ao castelo, você é parado por um pelotão de guardas reais.\n\
-Você ouve:\n\
-Guarda: Forasteiro, o quê quer. Veio em busca de uma audiencia com vossa ilustríssima majestade ?")
+capitulo2 = """Capítulo 2: No Caminho do Castelo
+Após a conversa com o anunciante real, você se dirige para o castelo no centro de Willowdale. 
+Andando pelas ruas da cidade, do porto até o centro, você começa a ouvir rumores. 
+Você ouve dois comerciantes de fora falando sobre uma caravana cujos membros foram todos mortos pelos monstros, exceto uma pessoa, cujo paradeiro não é sabido.
+Depois de ouvir a conversa, você continua se dirigindo ao castelo. 
+Ao chegar ao castelo, você é parado por um pelotão de guardas reais. 
+Você ouve: 
+Guarda: Forasteiro, o que deseja? Veio em busca de uma audiência com vossa ilustríssima majestade?"""
 
-capitulo3 = print("Capitulo 3: Um Pedido Real \n\
-No caminho para a sala do trono, você é escoltado por um destacamento de seis soldados. Vocês passam por salões e \n\
-corredores opulentos. Você observa: lustres de cristal, pendentes, pedras luminosas, muitos detalhes em ouro e pedras preciosas.\n\
-Entretanto sua atenção é rapidamente desviada quando vocês chegam a um grande portão.\n\
-Você ouve:\n\
-Guarda Praetor: Parem ! Quem é ele ?\n\
-Guarda da sua Escolta: Esse homem é um mercenario que está aqui pelo trabalho.\n\
-Guarda Praetor: Pois bem, vocês voltem aos seus postos. Assumiremos daqui.\n\
-Guardas da sua Escolta: Senhor, sim senhor !\n\
-Guarda Praetor: E você mercenario, venha comigo. Sua presença será anunciada à vossa majestade real.\n\
-Você: OK, lidere o caminho.\n\
-Você segue para o trono novamente escoltado por guardas, mas dessa vez eles são da elite, guardas especialmente selecionados\n\
-para a proteção do rei. Você se vê chegando cada vez mais perto do trono. Quando é parado por um guarda colocando a mão armadurada\n\
-em seu peito.\n\
-Você ouve:\n\
-Guarda Praetor: Com mil perdões vossa majestade rei de todas as cidades no pais do fogo, Rammsteineia. Rei Dio, primeiro de seu nome\n\
-senhor do fogo, metal e mundo.\n\
-Rei Dio: Dispenso tais formalidades meu sudito. Diga-me qual o motivo de sua presença.\n\
-Guarda Praetor: Não sou digno de tal informalidade senhor. Mas trago esse mercenario, ele veio de terras distantes para enfrentar os\n\
-perigos de El'goroth.\n\
-Rei Dio: Pois bem, mercenario não farei rodeos preciso de alguem poderoso o suficiente para enfrentar as criaturas que vem de lá.\n\
-e para além disso preciso de alguem que recupere a joia do reino, minha filha, a princesa Prika. É obvio que para o homem que\n\
-que quiser enfrentar tais perigos haverá uma bela reconpensa, uma que fará que você possa deixar de ser um errante e se torne\n\
-um nobre.\n\
-Você: Majestade me foi dito que a que estava estava em tais ruinas era um simples artefato.\n\
-Rei Dio: Na caravana em que minha filha foi levada, essa joia chamada de Rubi de Sangue estava sendo transportada. Um dos\n\
-mutilados que encontramos ainda estava vivo. Ele disse que ambos minha filha e a joia foram levadas em direção a El'goroth\n\
-pelas criaturas. Então aceita tal ,missão ?")
+capitulo3 = """Capítulo 3: Um Pedido Real
+No caminho para a sala do trono, você é escoltado por um destacamento de seis soldados. Vocês passam por salões e 
+corredores opulentos. Você observa: lustres de cristal, pendentes, pedras luminosas e muitos detalhes em ouro e pedras preciosas. 
+Entretanto, sua atenção é rapidamente desviada quando vocês chegam a um grande portão. 
+Você ouve: 
+Guarda Praetor: Parem! Quem é ele? 
+Guarda da sua Escolta: Esse homem é um mercenário que está aqui pelo trabalho. 
+Guarda Praetor: Pois bem, vocês voltem aos seus postos. Assumiremos daqui. 
+Guardas da sua Escolta: Senhor, sim senhor! 
+Guarda Praetor: E você, mercenário, venha comigo. Sua presença será anunciada à vossa majestade real. 
+Você: Ok, lidere o caminho. 
+Você segue para o trono novamente escoltado por guardas, mas desta vez eles são da elite, especialmente selecionados para a proteção do rei. 
+Você se vê chegando cada vez mais perto do trono, até ser parado por um guarda colocando a mão armadurada em seu peito. 
+Você ouve: 
+Guarda Praetor: Com mil perdões, vossa majestade rei de todas as cidades no país do fogo, Rammsteineia. Rei Dio, primeiro de seu nome, 
+senhor do fogo, metal e mundo. 
+Rei Dio: Dispenso tais formalidades, meu súdito. Diga-me qual o motivo de sua presença. 
+Guarda Praetor: Não sou digno de tal informalidade, senhor. Mas trago este mercenário, que veio de terras distantes para enfrentar os perigos de El'goroth. 
+Rei Dio: Pois bem, mercenário, não farei rodeios. Preciso de alguém poderoso o suficiente para enfrentar as criaturas que vêm de lá e, além disso, 
+recuperar a joia do reino, minha filha, a princesa Prika. É óbvio que para o homem que quiser enfrentar tais perigos haverá uma bela recompensa, 
+uma que permitirá que você deixe de ser um errante e se torne um nobre. 
+Você: Majestade, foi-me dito que o que estava nas ruínas era apenas um artefato. 
+Rei Dio: Na caravana em que minha filha foi levada, estava sendo transportada uma joia chamada Rubi de Sangue. Um dos mutilados que encontramos ainda estava vivo. 
+Ele disse que tanto minha filha quanto a joia foram levadas em direção a El'goroth pelas criaturas. Então, aceita tal missão?"""
 
-capitulo4 = print("Capitulo 4: A Caminho da Cena\n\
-Você se encontra a caminho do local onde a princesa e o Rubi sumiram. Entretanto no caminho você vê homens parados no\n\
-caminho. Você decide se esconder e ouvir o que esses homens falam.\n\
-Você ouve:\n\
-Homem Forte: Esidisi fale para os outos se esconderem, pegaremos os grupos de mercadores desprevinidos.\n\
-Esidisi: Senhor Santana, essa estrada pode estar cheia de guardas, graças a caravana atacada.\n\
-Santana: Não se preocupe. Nossos homens são capazes o sufiente para vencer guardinhas. Agora vá, e comunique minhas ordens.\n\
-Esidisi: Senhor, sim senhor. Imediatamente.")
+capitulo4 = """Capítulo 4: A Caminho da Cena
+Você se encontra a caminho do local onde a princesa e o Rubi desapareceram. Entretanto, no trajeto, você vê homens parados no caminho. 
+Você decide se esconder e ouvir o que esses homens falam. 
+Você ouve: 
+Homem Forte: Esidisi, diga aos outros para se esconderem. Pegaremos os grupos de mercadores desprevenidos. 
+Esidisi: Senhor Santana, essa estrada pode estar cheia de guardas, graças à caravana atacada. 
+Santana: Não se preocupe. Nossos homens são capazes o suficiente para vencer alguns guardas. Agora vá e comunique minhas ordens. 
+Esidisi: Senhor, sim senhor. Imediatamente."""
 
-capitulo5 = print("Capitulo 5: Uma Cena de Horror\n\
-Você chega ao local do acontecido. O ar fede a sangue seco e cheiro de floresta, há manchas de sangue por todos os lados.\n\
-Há pedaços de corpos e cavalos, roupas e de espadas. Você coisas estranhas espalhadas por essa área. Você decide investigar.")
+capitulo5 = """Capítulo 5: Uma Cena de Horror
+Você chega ao local do ocorrido. O ar fede a sangue seco e ao cheiro da floresta. Há manchas de sangue por todos os lados, pedaços de corpos e cavalos, roupas e espadas.
+Você encontra coisas estranhas espalhadas por essa área. Você decide investigar."""
 
-capitulo6 = print("Capitulo 6: A Caminho de El'goroth\n\
-Ao concluir a sua investigação na cena do massacre, você conclui que as criaturas são demonios. E o ataque a caravana\n\
-não foi algo aleatorio. Você conclui que o Rubi e sua portadora a princesa Prika eram os alvos dos demonios, o porquê é incerto.\n\
-Você segue a cavalo pela estrada, até os limites de El'goroth. Entretanto você é logo recebido por cães demonios. ")
+capitulo6 = """Capítulo 6: A Caminho de El'goroth
+Ao concluir sua investigação na cena do massacre, você deduz que as criaturas são demônios e que o ataque à caravana não foi algo aleatório.
+Você conclui que o Rubi e sua portadora, a princesa Prika, eram os alvos dos demônios.
+O motivo, porém, é incerto. 
+Você segue a cavalo pela estrada até os limites de El'goroth.
+Entretanto, logo é recebido por cães demoníacos."""
 
-capitulo7 = print("Capitulo 7: El'goroth: A Biblioteca nas Sombras\n\
-Após emboscada dos cães demonios você entra nas ruinas da cidade de El'goroth. O escuro quase palpavel da cidade junto com uma\n\
-nevoa densa, torna o lugar melancolico e soturno. Você saca a sua tocha, acende. No entanto você só consegue ver poucos metros a\n\
-sua volta. Seguindo o caminho que você acha ser a rua principal, você vê uma construção antiga porem muito poupada da devastação\n\
-do tempo que parece ter se abatido sobre o resto da cidade.\n\
-Você percebe que está em uma biblioteca, você vê uma infinitude de livros, em prateleiras a sua frente.\n\
-Perdido, naquele mar de papel e tinta. Você um vulto entrando em uma das fileiras de prateleiras.")
+capitulo7 = """Capítulo 7: El'goroth: A Biblioteca nas Sombras
+Após a emboscada dos cães demoníacos, você entra nas ruínas da cidade de El'goroth.
+O escuro quase palpável da cidade, juntamente com uma névoa densa, torna o lugar melancólico e soturno.
+Você saca sua tocha e a acende, mas só consegue ver poucos metros à sua volta. 
+Seguindo o caminho que parece ser a rua principal, você vê uma construção antiga, aparentemente muito bem preservada, diferente do resto da cidade.
+Você percebe que está em uma biblioteca. 
+Uma infinitude de livros ocupa prateleiras à sua frente. Perdido naquele mar de papel e tinta, você vê um vulto entrando em uma das fileiras de prateleiras."""
 
-capitulo8 = print("Capitulo 8: El'goroth: O Livro\n\
-Você vê uma prateleira, de aparencia muito mais entretanto muito mais limpa tambem, como se fosse cuidada.\n\
-Nessa plateleira você vê um livro em meio a livros, esse livro não parece ter nada demais. Mas ele tem um ar que o atrai.\n\
-Você se aproxima com cuidado. Mas quanto mais perto do livro mais compelido a toca-lo você fica.")
+capitulo8 = """Capítulo 8: El'goroth: O Livro
+Você vê uma prateleira com aparência muito mais cuidada do que as outras, como se fosse limpa regularmente. 
+Entre os livros, há um que parece comum, mas que emite um ar que o atrai. 
+Você se aproxima com cuidado, mas, quanto mais perto do livro, mais compelido a tocá-lo você se sente."""
 
-capitulo9 = print("Capitulo 9: El'goroth: Uma Viagem Estranha\n\
-Você toca no livro. Você começa a ver flashes diante dos seus, luzes, terror, cidades destruidas, corpos mutilados e profanados\n\
-por todos os lados. Um medo profundo e antigo toma de assalto sua alma, você se sente como uma criança solitaria perdida em meio\n\
-ao caos. Você luta contra um Extinto primordal de gritar, mãe. Derrepente tudo para, vocẽ só vê branco infinito.\n\
-Você ouve:\n\
-Voz ao Longe: HAHAHABUHAHAHABUHAHAHA. VOCÊ GOSTOU DO DESTINO QUE ESPERA TODA A HUMANIDA, HEROI ?\n\
-Você: Quem, quem é vovovovocê ? O que feeez com migo ? Onde eeeeeu estouuu ?\n\
-Voz ao Longe: HAHAHABUHAHAHABUHAHAHA. PARECE QUE A VISÃO LHE FEZ MAL, ESTÁ FALANDO COMO SE TIVESSE VIRADO UM BARRIL DE HIDROMEL.\N\
-VOU FACILITAR AS COISAS PARA VOCÊ.\N\
-Diante de seus olhos aquilo que era apenas uma voz se torna uma a figura de uma mulher.\n\
-Mulher Misteriosa: HAHAHABUHAHAHABUHAHAHA. Meu nome, bom ao menos o nome o qual era chamada enquanto no seu mundo, é Natasha.\n\
-Não direi que é um prazer conhecer-lo, já que não é. Já sobre o que você viu, é uma visão resumindo os tempos vindouros.\n\
-E terceiro e menos importante e mais obvio é, você está dentro de um livro.")
+capitulo9 = """Capítulo 9: El'goroth: Uma Viagem Estranha
+Você toca no livro e começa a ver flashes diante de seus olhos: luzes, terror, cidades destruídas, corpos mutilados e profanados. 
+Um medo profundo e antigo toma sua alma. Você se sente como uma criança solitária perdida em meio ao caos. 
+Você luta contra um instinto primitivo de gritar "mãe".
+De repente, tudo para, e você só vê um branco infinito. 
+Você ouve: 
+Voz ao Longe: HAHAHAHAHA! VOCÊ GOSTOU DO DESTINO QUE ESPERA TODA A HUMANIDADE, HERÓI? 
+Você: Quem... quem é você? O que fez comigo? Onde estou? 
+Voz ao Longe: HAHAHAHAHA! PARECE QUE A VISÃO LHE FEZ MAL, ESTÁ FALANDO COMO SE TIVESSE BEBIDO UM BARRIL DE HIDROMEL. 
+VOU FACILITAR AS COISAS PARA VOCÊ. 
+Diante de seus olhos, a voz ganha forma e se torna uma mulher. 
+Mulher Misteriosa: Meu nome, ao menos o nome pelo qual era chamada no seu mundo, é Natasha. 
+Não direi que é um prazer conhecê-lo, porque não é. O que você viu é uma visão dos tempos vindouros. E, para sua terceira pergunta. 
+É você está dentro de um livro."""
 
-capitulo10 = print("Capitulo 10: El'goroth: Segredos nas Sombras\n\
-Natasha: Vamos aos negocios aja visto que você não tem muito tempo. Imagino que para chegar aqui você já tenha lutado\n\
-com alguns demonios, criaturas realmente desagradaveis. Bom, para simplificar e resumir. Existe uma pedra chamada Rubi de sangue,\n\
-essa pedra contem um dos generais do inferno, um desgraçado de marca maior chamado Astaroth. Um Clerigo chamado Ozzy e eu,\n\
-lutamos contra ele e o selamos no tal rubi. Mas para garantir que o general não iria sair tão cedo, ele colocou o rubi na propria\n\
-testa e permaneceu selado lutando contra a criatura. Mas se você está aqui, isso significa uma de duas coisas: Ou Ozzy perde ou\n\
-alguem tirou o rubi do local.\n\
-Você: O rubi estava em uma caravana real, ele e a princesa sumiram.\n\
-Natasha: Merda, é isso que dá as pessoas não aprenderem historia. Sorte sua que eu me selei a esse livro, para ajudar os proximos com\n\
-a tarefa. Mas quanto a princesa, ele percebeu que se selar alguém no rubi, que não resistirá, ele vai poder assumir, traduzindo,\n\
-um corpo fisico novinho em folha.\n\
-Você: E como paramos isso ?\n\
-Natasha: Mata ou Prende\n\
-Você: E como se mata ele ?\n\
-Natasha: Quando ele se tomar o corpo da princesa, nas primeiras horas estará vuneravel. Aí você mata.\n\
-Você: E a princesa ?\n\
-Natasha: Morre Junto.\n\
-Você: E prender ?\n\
-Natasha: Normalmente envolve um ritual, mas como já fizemos isso. Só precisa colocar a pedra na testa de alguém que lute e resista contra\n\
-ele por toda a eternidade ou até ele te vencer.\n\
-Você: Me diga onde você acha que ele se escondeu ?\n\
-Natasha: No mesmo lugar de antes, no centro da cidade, em baixo da prefeitura. Lá há um ninho de sangue que o deixa mais forte.\n\
-Você: Natasha, obrigado pela direção e por seu sacrificio.\n\
-Natasha: Eutenho um pedido. Me leva junto. É só levar o livro.")
+capitulo10 = """Capítulo 10: El'goroth: Segredos nas Sombras
+Natasha: Vamos aos negócios, visto que você não tem muito tempo. Imagino que, para chegar aqui, já tenha lutado com alguns demônios. 
+Criaturas realmente desagradáveis.
+Bom, para simplificar: existe uma pedra chamada Rubi de Sangue. 
+Essa pedra contém um dos generais do inferno, um desgraçado chamado Astaroth. Um clérigo chamado Ozzy e eu lutamos contra ele e o selamos no Rubi.
+Para garantir que ele não sairia tão cedo, Ozzy colocou o Rubi em sua própria testa e permaneceu selado, lutando contra a criatura.
+Mas, se você está aqui, significa uma de duas coisas: ou Ozzy perdeu ou alguém tirou o Rubi do lugar. 
+Você: O Rubi estava em uma caravana real.
+Ele e a princesa desapareceram. 
+Natasha: Droga! É isso que dá as pessoas não aprenderem história.
+Sorte sua que me selei neste livro para ajudar os próximos com a tarefa. 
+Quanto à princesa, se ele perceber que pode se selar em alguém que não resista, poderá assumir um corpo físico novinho em folha. 
+Você: E como podemos detê-lo? 
+Natasha: Mate ou prenda. 
+Você: E como se mata ele? 
+Natasha: Quando ele tomar o corpo da princesa, estará vulnerável nas primeiras horas.
+É sua chance. 
+Você: E a princesa? 
+Natasha: Morre junto. 
+Você: E prender? 
+Natasha: Normalmente envolve um ritual, mas como já fizemos isso antes, basta colocar a pedra na testa de alguém que lute e resista contra ele por toda a eternidade ou até ser derrotado. 
+Você: Onde ele se esconde? 
+Natasha: No mesmo lugar de antes, no centro da cidade, embaixo da prefeitura.
+Há um ninho de sangue lá que o fortalece. 
+Você: Natasha, obrigado pela orientação e pelo sacrifício. 
+Natasha: Tenho um pedido.
+Leve-me junto, basta levar o livro."""
+
+capitulo11 = """Capítulo 11: El'goroth: A Caminho da Batalha
+Você segue para o centro da cidade de El'goroth. Em meio às ruínas abandonadas, sente um cheiro de enxofre que se aproxima.
+"""
