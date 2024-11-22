@@ -3,7 +3,7 @@ from tkinter import messagebox, ttk
 import random as r
 import personagem as p
 import salvamento as s
-import historia  # Importando o módulo historia
+import historia
 
 # Classe principal do jogo
 class Jogo:
