@@ -93,8 +93,8 @@ Não direi que é um prazer conhecê-lo, porque não é. O que você viu é uma 
 capitulo10 = """Capítulo 10: El'goroth: Segredos nas Sombras
 Natasha: Vamos aos negócios, visto que você não tem muito tempo. Imagino que, para chegar aqui, já tenha lutado com alguns demônios. 
 Criaturas realmente desagradáveis.
-Bom, para simplificar: existe uma pedra chamada Rubi de Sangue. 
-Essa pedra contém um dos generais do inferno, um desgraçado chamado Astaroth. Um clérigo chamado Ozzy e eu lutamos contra ele e o selamos no Rubi.
+Bom, para simplificar. Existe uma pedra chamada Rubi de Sangue. 
+Essa pedra contém uma das generais do inferno, uma desgraçada chamada Astaroth. Um clérigo chamado Ozzy e eu lutamos contra ela e a selamos no Rubi.
 Para garantir que ele não sairia tão cedo, Ozzy colocou o Rubi em sua própria testa e permaneceu selado, lutando contra a criatura.
 Mas, se você está aqui, significa uma de duas coisas: ou Ozzy perdeu ou alguém tirou o Rubi do lugar. 
 Você: O Rubi estava em uma caravana real.
@@ -102,15 +102,15 @@ Ele e a princesa desapareceram.
 Natasha: Droga! É isso que dá as pessoas não aprenderem história.
 Sorte sua que me selei neste livro para ajudar os próximos com a tarefa. 
 Quanto à princesa, se ele perceber que pode se selar em alguém que não resista, poderá assumir um corpo físico novinho em folha. 
-Você: E como podemos detê-lo? 
+Você: E como podemos detê-la? 
 Natasha: Mate ou prenda. 
 Você: E como se mata ele? 
-Natasha: Quando ele tomar o corpo da princesa, estará vulnerável nas primeiras horas.
+Natasha: Quando ela tomar o corpo da princesa, estará vulnerável nas primeiras horas.
 É sua chance. 
 Você: E a princesa? 
 Natasha: Morre junto. 
 Você: E prender? 
-Natasha: Normalmente envolve um ritual, mas como já fizemos isso antes, basta colocar a pedra na testa de alguém que lute e resista contra ele por toda a eternidade ou até ser derrotado. 
+Natasha: Normalmente envolve um ritual, mas como já fizemos isso antes, basta colocar a pedra na testa de alguém que lute e resista contra ela por toda a eternidade ou até ser derrotado. 
 Você: Onde ele se esconde? 
 Natasha: No mesmo lugar de antes, no centro da cidade, embaixo da prefeitura.
 Há um ninho de sangue lá que o fortalece. 
@@ -119,5 +119,43 @@ Natasha: Tenho um pedido.
 Leve-me junto, basta levar o livro."""
 
 capitulo11 = """Capítulo 11: El'goroth: A Caminho da Batalha
-Você segue para o centro da cidade de El'goroth. Em meio às ruínas abandonadas, sente um cheiro de enxofre que se aproxima.
-"""
+Você segue para o centro da cidade de El'goroth. Em meio às ruínas abandonadas, sente um cheiro de enxofre que se aproxima. Você decide continuar com mais cuidado, usando as ruinas das
+construções como proteção e esconderijo. Chegando a um quarterão da prefeitura, você vê uma criatura rotundra, horrenda, sem pele, cuja a carne exposta traz um asco e ancia de vomito,
+aquela criatura de uns 2 metros de altura, tem chifres pontudos e um machado de guerra gigantesca. Você observa aquela criatura ao longe e planeja seu proximo passo."""
+
+capitulo12 = f"""Capitulo 12: El'goroth: As Portas do Fim do Mundo
+Depois de passar pela criatura, você continua em seu caminho para prefeitura. Você vê um predio opulento, bem fortificado quase como um castelo abandonado.
+Você ouve uma voz saindo lentamente da prefeitura:
+Voz: Estavamos espererando, Heroi
+Você: Quem é você ?
+Você uma criatura humanoide, de pele rosada. Ele não é repulsivo como o anterior, mas sua presença é intimidadora. Você sente um poder imensurável, algo que te assusta.
+Voz: Eu, no seu mundo tenho muitos nomes. No meu eu sou chamado de Anung Un Rama.
+Você: Pois bem, Amung Un Rama, e agora ?.
+Anung Un Rama: Agora parece que você tem negocios aqui, e eu estou para te parar. O que será que vai acontecer ?"""
+
+capitulo13 = """Capitulo 13: El'goroth: A Batalha Vindoura
+Você conseguiu passar por pouco por Anung Un Rama, você se sente aliviado. Mas o seu alivio dura pouco, quando você olha o seu redor, percebe varias criaturas animalescas pela prefeitura.
+As criaturas te percebem, mas não atacam. Isso te gera uma estranhesa, mas você não para para refletir. Você continua a sua jornada ao fundo da prefeitura, entretanto é subtamente atacado por uma besta, você
+desvia mas a criatura impede o seu avanço, do escuro sai mais uma daquelas criaturas, uma que parece ter controle sobre as bestas.
+Você Ouve:
+Criatura nas Sombras: HAHAHA, muito bem herói. Lutou contra meus irmãos e prosperou. Mas como será contra mim e minhas bestas.
+Você: Vocẽ é mais um deles.
+Criatura nas Sombras: Sim, eu sou o Zodd: O Mestre das Criaturas. E você é a minha presa."""
+
+capitulo14 = """Capitulo 14: El'goroth: Apesar de Toda a Dificuldade
+Vocẽ sobrevive a emboscada de Zodd. Mesmo cansado dos obstaculos você continua. Você consengue sentir a aproximação da camara aonde o ritual se realiza.
+Entretanto você sente que está sendo vigiado de perto.
+Você Grita:
+Você: Apareça logo Desgraçado.
+Voz nas Sombras: Muito bem, você me descobriu. Eu sou Khan.
+Você: Apareça, Khan. Khan!!!!!!!
+Khan: Aqui estou."""
+
+capitulo15 = """Capitulo 15: El'goroth: A Ultima Batalha
+Você chega a sala do ritual. Cansado e ferido luta após luta. Você vê a princesa, mas na testa dela está o rubi.
+Você ouve:
+Princesa (Astaroth): Chegou tarde heroi, eu já reclamei o meu novo corpo.
+Você: Desgraçada, saia dela já.
+Princesa (Astaroth): Se quiser que eu saia, venha me tirar."""
+
+final1 =""""""

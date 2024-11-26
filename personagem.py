@@ -102,8 +102,9 @@ def jogador(nome, raca, classe, atributos):
 
     return fichajogador
 
-def adicionarmochila(item):
-    mochila = []
+
+
+def adicionarmochila(item, mochila):
     quantidade = 0
     for objeto in mochila:
         if objeto[0] == item:
@@ -115,41 +116,33 @@ def adicionarmochila(item):
         print(f"{item} foi adicionado a sua mochila.")
     return mochila
 
-def mostrarmochila():
-    mochila = adicionarmochila(item)
+def mostrarmochila(mochila):
     if mochila:
         print("Mochila:")
         for item in mochila:
-            print(f"- {item}")
+            print(f"- {item[0]} (Quantidade: {item[1]})")
     else:
-        print("Sua Mochila está vazio.")
+        print("Sua Mochila está vazia.")
 
+def usaritem(item, mochila):
+    for objeto in mochila:
+        if objeto[0] == item:
+            if objeto[1] > 0:
+                objeto[1] -= 1
+                print(f"Você usou um {item}.")
+                if objeto[1] == 0:
+                    mochila.remove(objeto)
+                return mochila
+            else:
+                print(f"Você não tem mais {item} na mochila.")
+                return mochila
+    print(f"O item {item} não está na mochila.")
+    
+    return mochila
 
 def morte():
     print("Você Morreu")
+    exit()
     
 
-def ataque(atacante, defensor):
-    dano = max(atacante["Atributos"]["ATK"] - defensor["Atributos"]["DEF"], 0)
-    defensor["Atributos"]["HP"] -= dano
-    return dano
 
-def combate(jogador, inimigo):
-    print(f"Iniciando combate entre {jogador['Nome']} e {inimigo['Nome']}!")
-    
-    while jogador["Atributos"]["HP"] > 0 and inimigo["Atributos"]["HP"] > 0:
-        dano = ataque(jogador, inimigo)
-        print(f"{jogador['Nome']} ataca {inimigo['Nome']} causando {dano} de dano.")
-        print(f"{inimigo['Nome']} tem {inimigo['Atributos']['HP']} HP restantes.")
-        
-        if inimigo["Atributos"]["HP"] <= 0:
-            print(f"{inimigo['Nome']} foi derrotado!")
-            break
-        
-        dano = ataque(inimigo, jogador)
-        print(f"{inimigo['Nome']} ataca {jogador['Nome']} causando {dano} de dano.")
-        print(f"{jogador['Nome']} tem {jogador['Atributos']['HP']} HP restantes.")
-        
-        if jogador["Atributos"]["HP"] <= 0:
-            print(f"{jogador['Nome']} foi derrotado!")
-            break
