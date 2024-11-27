@@ -71,7 +71,7 @@ def atributos(raca, classe):
     elif classe == "Ladino":
         HP = r.randint(20, 25) + atributostotais["Constituição"]
         DEF = r.randint(20, 25) + atributostotais["Destreza"]
-        ATK = r.randint(4, 8) + atributostotais["Força"] + atributos_totais["Inteligência"]
+        ATK = r.randint(4, 8) + atributostotais["Força"] + atributostotais["Inteligência"]
         MAG = atributostotais["Inteligência"] + atributostotais["Carisma"] + atributostotais["Sabedoria"]
         atributosjogador = {"HP": HP, "DEF": DEF, "ATK": ATK, "MAG": MAG}
         print(f"HP: {HP}, DEF: {DEF}, ATK: {ATK}, MAG: {MAG}")

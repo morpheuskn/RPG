@@ -123,15 +123,15 @@ Você segue para o centro da cidade de El'goroth. Em meio às ruínas abandonada
 construções como proteção e esconderijo. Chegando a um quarterão da prefeitura, você vê uma criatura rotundra, horrenda, sem pele, cuja a carne exposta traz um asco e ancia de vomito,
 aquela criatura de uns 2 metros de altura, tem chifres pontudos e um machado de guerra gigantesca. Você observa aquela criatura ao longe e planeja seu proximo passo."""
 
-capitulo12 = f"""Capitulo 12: El'goroth: As Portas do Fim do Mundo
+capitulo12 = """Capitulo 12: El'goroth: As Portas do Fim do Mundo
 Depois de passar pela criatura, você continua em seu caminho para prefeitura. Você vê um predio opulento, bem fortificado quase como um castelo abandonado.
 Você ouve uma voz saindo lentamente da prefeitura:
 Voz: Estavamos espererando, Heroi
 Você: Quem é você ?
 Você uma criatura humanoide, de pele rosada. Ele não é repulsivo como o anterior, mas sua presença é intimidadora. Você sente um poder imensurável, algo que te assusta.
 Voz: Eu, no seu mundo tenho muitos nomes. No meu eu sou chamado de Anung Un Rama.
-Você: Pois bem, Amung Un Rama, e agora ?.
-Anung Un Rama: Agora parece que você tem negocios aqui, e eu estou para te parar. O que será que vai acontecer ?"""
+Você: Pois bem, Amung Un Rama, e agora ?
+Anung Un Rama: Agora parece que você tem negocios aqui, e aqui estou para que você não chegue lá. O que será que vai acontecer ?"""
 
 capitulo13 = """Capitulo 13: El'goroth: A Batalha Vindoura
 Você conseguiu passar por pouco por Anung Un Rama, você se sente aliviado. Mas o seu alivio dura pouco, quando você olha o seu redor, percebe varias criaturas animalescas pela prefeitura.
@@ -158,4 +158,63 @@ Princesa (Astaroth): Chegou tarde heroi, eu já reclamei o meu novo corpo.
 Você: Desgraçada, saia dela já.
 Princesa (Astaroth): Se quiser que eu saia, venha me tirar."""
 
-final1 =""""""
+finalbomlivro = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,
+você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que mesmo após a ultima batalha ela
+por um milagre permanece viva. Você vê a joia em sua testa e parte para retira-la e por na sua.
+Você Ouve:
+Natasha: Não. Eu irei.
+Você: Mas Natasha...
+Natasha: Nada de Mas, você tinha um trabalho e vai cumpri-lo. Tire a princesa daqui e proteja a joia.
+Natasha começa um ritual do seu livro magico. Você ouve as palavras: Azarath Metrion Zinthos. O livro começa a se bater e emitindo luzes, o rubi e o livro começam a levitar.
+E subtamente uma explosão de energia ocorre dos dois. Você protege a princesa da explosão. O silencio e a escuridão tomam o ambiente.
+Você ancende a sua tocha, pega o rubi e a princesa e sai desse lugar. Você volta pela cidade, vagando pelas ruinas a procura de seu cavalo.
+Algum Tempo depois...
+Você chega aos portões da cidade, os guardas prontamente te escoltam, com olhares admirados, até o rei.
+Ao chegar você recebe os loros da sua vitoria.
+FIM !"""
+
+finalbom = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,
+você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que mesmo após a ultima batalha ela
+por um milagre permanece viva. Você vê a joia em sua testa e parte para retira-la e por na sua.
+Ao colocar a joia, você é levado a um espaço branco. Lá você vê Astaroth. Sem pensar muito você parte para lutar com ela pela eternidade.
+FIM !"""
+
+finalmaisoumenoslivro = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,
+você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que mesmo após a ultima batalha ela
+por um milagre permanece viva. Você vê a joia em sua testa e parte para retira-la e por na sua.
+Você Ouve:
+Natasha: O seu sacrificio, não será esquecido.
+Você: Natasha, se algo assim acontecer nos futuro, guie o proximo assim como me guiou.
+Natasha: Eu prometo.
+Ao colocar a joia, você é levado a um espaço branco. Lá você vê Astaroth. Sem pensar muito você parte para lutar com ela pela eternidade.
+FIM !"""
+
+finalmaisoumenos = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,
+você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que mesmo após a ultima batalha ela
+por um milagre permanece viva. Você vê a joia em sua testa e parte para retira-la e por na sua.
+Ao colocar a joia, você é levado a um espaço branco. Lá você vê Astaroth. Sem pensar muito você parte para lutar com ela pela eternidade.
+FIM !"""
+
+finalruimlivro = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,
+você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que mesmo após a ultima batalha ela
+por um milagre permanece viva. Você vê a joia em sua testa e parte para retira-la e toma-la para você.
+Você Ouve:
+Natasha: Não. Não faça isso.
+Você: Cala a boca, eu vou tomar esse poder.
+Natasha começa um ritual do seu livro magico. Você ouve as palavras: Azarath Metrion Zinthos. O livro começa a se bater e emitindo luzes, o rubi e o livro começam a levitar.
+E subtamente uma explosão de energia ocorre dos dois. Você é jogado ao longe pela explosão. O silencio e a escuridão tomam o ambiente.
+Você ancende a sua tocha, pega o rubi e coloca na sua testa, na esperança de conseguir barganhar 
+Algum Tempo depois...
+Você chega aos portões da cidade, os guardas olham com olhares horrorisados. Você massacra a todos e parte para tomar a capital real. 
+FIM !"""
+
+finalruim = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,
+você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que mesmo após a ultima batalha ela
+por um milagre permanece viva. Você vê a joia em sua testa e parte para retira-la e toma-la para você.
+Ao colocar a joia, você é levado a um espaço branco. Lá você vê Astaroth. Sem pensar muito você parte para barganhar por poder.
+Você Ouve:
+Astaroth: Você veio para barganha. Ridiculo. Seu corpo agora é meu.
+Você: NÃO!!!!!!!!
+Algum Tempo depois...
+Astaroth chega aos portões da cidade, usando o seu corpo, os guardas olham com olhares horrorisados. Ela massacra a todos e parte para tomar o mundo para si. 
+FIM !"""
