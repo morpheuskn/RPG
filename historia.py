@@ -1,3 +1,5 @@
+# Cada texto dos capitulos da historia e seus finais estão nesse modulo
+
 capitulo1 = """Capítulo 1: A Cidade de Willowdale
 Você chega à cidade de Willowdale, um centro comercial vibrante. 
 Rumores de um artefato poderoso escondido nas ruínas da antiga cidade de El'goroth atraem aventureiros. 
@@ -180,8 +182,8 @@ Ao colocar a joia, você é levado a um espaço branco. Lá você vê Astaroth. 
 FIM !"""
 
 finalmaisoumenoslivro = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,
-você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que mesmo após a ultima batalha ela
-por um milagre permanece viva. Você vê a joia em sua testa e parte para retira-la e por na sua.
+você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que após a batalha feroz ela não resistiu. 
+Você vê a joia em sua testa e parte para retira-la e por na sua.
 Você Ouve:
 Natasha: O seu sacrificio, não será esquecido.
 Você: Natasha, se algo assim acontecer nos futuro, guie o proximo assim como me guiou.
@@ -196,8 +198,8 @@ Lá você vê Astaroth. Sem pensar muito você parte para lutar com ela pelo tem
 FIM !"""
 
 finalruimlivro = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,
-você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que mesmo após a ultima batalha ela
-por um milagre permanece viva. Você vê a joia em sua testa e parte para retira-la e toma-la para você.
+você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que após a batalha feroz ela não resistiu. 
+Você vê a joia em sua testa e parte para retira-la e toma-la para você.
 Você Ouve:
 Natasha: Não. Não faça isso.
 Você: Cala a boca, eu vou tomar esse poder.
@@ -209,8 +211,8 @@ Você chega aos portões da cidade, os guardas olham com olhares horrorisados. V
 FIM !"""
 
 finalruim = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,
-você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que mesmo após a ultima batalha ela
-por um milagre permanece viva. Você vê a joia em sua testa e parte para retira-la e toma-la para você.
+você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que após a batalha feroz ela não resistiu. 
+Você vê a joia em sua testa e parte para retira-la e toma-la para você.
 Ao colocar a joia, você é levado a um espaço branco. Lá você vê Astaroth. Sem pensar muito você parte para barganhar por poder.
 Você Ouve:
 Astaroth: Você veio para barganha. Ridiculo. Seu corpo agora é meu.
