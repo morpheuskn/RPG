@@ -29,6 +29,7 @@ def menu():
             jogador = p.jogador(nome, raca, classe, atributos)
             s.salvarjogo(jogador)
             e.escolha1(jogador)
+            menu()
         case 2:
             jogador = s.carregarjogo()
             if jogador:

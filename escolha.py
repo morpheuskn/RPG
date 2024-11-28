@@ -1,7 +1,6 @@
 import historia as h
 import personagem as p
 import combates as c
-jogador = {"Nome": "Tommy", "Ra\u00e7a": "Hobbit", "Classe": "Feiticeiro", "Atributos": {"HP": 17, "DEF": 21, "ATK": 0, "MAG": 19}, "Arma": "Missil Magico"}
 karma = 0
 
 mochila = []  
@@ -458,7 +457,7 @@ def escolha15(jogador):
             print("""Você: Eu vou terminar isso agora.""")
             c.combate(jogador, c.orcmago)
             atualizarkarma(0)
-            final(mochila) # Chama a próxima escolha
+            final(jogador, karma, mochila) # Chama a próxima escolha
         case 2:
             p.mostrarmochila(mochila)
             escolha15(jogador) # Chama a próxima escolha
@@ -466,27 +465,23 @@ def escolha15(jogador):
             print("Opção inválida. Tente novamente.")
             escolha15(jogador)
 
-def final(mochila):
-    print (karma)
-    if "Livro Magico" in mochila:
-        if karma > 14:
-             print(h.finalbomlivro)
-             exit()
-        elif karma > -14 and karma < 14:
-             print(h.finalmaisoumenoslivro)
-             exit()
-        elif karma < 14:
-             print(h.finalruimlivro)
-             exit()
-    elif "Livro Magico" not in mochila:
-        if karma > 14:
-             print(h.finalbom)
-             exit()
-        elif karma > -14 and karma < 14:
-             print(h.finalmaisoumenos)
-             exit()
-        elif karma < 14:
-             print(h.finalruim)
-             exit()
-
-escolha1(jogador)
+def final(jogador, karma, mochila):
+    print(f"Karma final: {karma}")
+    for livro in mochila:
+        if "Livro Magico" in livro:
+            if karma > 14:
+                print(h.finalbomlivro)
+            elif -14 <= karma <= 14:
+                print(h.finalmaisoumenoslivro)
+            else:
+                print(h.finalruimlivro)
+        else:
+            if karma > 14:
+                print(h.finalbom)
+            elif -14 <= karma <= 14:
+                print(h.finalmaisoumenos)
+            else:
+                print(h.finalruim)
+           
+    print("Fim do jogo.")
+    exit()

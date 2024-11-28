@@ -1,0 +1,173 @@
+from tkinter import *
+from tkinter import messagebox, ttk
+import random as r
+import personagem as p
+import salvamento as s
+import historia
+import escolha  # Importa o módulo escolha
+
+# Classe principal do jogo
+class Jogo:
+
+    def __init__(self):
+        self.jogador = None  # Inicializa o jogador como None
+        self.capituloatual = 1  # Define o capítulo atual do jogo
+        self.karma = 0  # Inicializa o karma
+        self.mochila = []  # Inicializa a mochila do jogador
+
+    def novojogo(self):
+        # Limpa o conteúdo da janela principal
+        for widget in janela.winfo_children():
+            widget.destroy()
+        
+        # Cria um novo Frame para novo jogo
+        framenovojogo = Frame(janela, bg="black")
+        framenovojogo.pack(pady=20)
+
+        # Campo para entrada do nome do jogador
+        Label(framenovojogo, text="Nome:", bg="black", fg="green").pack()
+        entrynome = Entry(framenovojogo)
+        entrynome.pack()
+
+        # Seleção de Raça
+        Label(framenovojogo, text="Raça:", bg="black", fg="green").pack()
+        racas = ["Humano", "Elfo", "Anão", "Hobbit"]
+        comboraca = ttk.Combobox(framenovojogo, values=racas)
+        comboraca.pack()
+
+        # Seleção de Classe
+        Label(framenovojogo, text="Classe:", bg="black", fg="green").pack()
+        classes = ["Guerreiro", "Feiticeiro", "Ladino", "Guardião"]
+        comboclasse = ttk.Combobox(framenovojogo, values=classes)
+        comboclasse.pack()
+
+        # Função para salvar o novo jogo
+        def salvarnovojogo():
+            nome = entrynome.get()  # Obtém o nome do jogador
+            raca = comboraca.get()  # Obtém a raça selecionada
+            classe = comboclasse.get()  # Obtém a classe selecionada
+            atributos = p.atributos(raca, classe)  # Obtém os atributos baseados na raça e classe
+            self.jogador = p.jogador(nome, raca, classe, atributos)  # Cria um novo objeto jogador
+            s.salvarjogo(self.jogador)  # Salva o jogo
+            messagebox.showinfo("Novo Jogo", f"Jogo salvo com sucesso! Jogador: {nome}, Raça: {raca}, Classe: {classe}, Atributos: {atributos}")  # Mensagem de sucesso
+            
+            # Inicia a história após a criação do personagem
+            self.iniciarhistoria()
+
+        # Botão para salvar o jogo
+        Button(framenovojogo, text="Salvar Jogo", command=salvarnovojogo, bg="black", fg="green", highlightbackground="black").pack(pady=10)
+
+    def iniciarhistoria(self):
+        # Limpa a tela atual
+        for widget in janela.winfo_children():
+            widget.destroy()
+
+        # Configurações da tela de história
+        janela.title("A Aventura é Iniciada")
+        janela.geometry("800x600")
+        janela.configure(bg="black")
+
+        self.exibircapitulo(self.capituloatual)  # Exibe o primeiro capítulo
+
+    def exibircapitulo(self, capitulo):
+        # Limpa a tela atual
+        for widget in janela.winfo_children():
+            widget.destroy()
+
+        # Exibe o título do capítulo
+        titulo = Label(janela, text=f"Capítulo {capitulo}", bg=" black", fg="green", font=("Courier", 30))
+        titulo.pack(pady=20)
+
+        # Exibe o texto do capítulo importado do módulo historia
+        textocapitulo = getattr(historia, f'capitulo{capitulo}', "Capítulo não encontrado.")
+        texto = Label(janela, text=textocapitulo, bg="black", fg="white", wraplength=700, justify="left")
+        texto.pack(pady=20)
+
+        # Adiciona opções de escolha
+        self.adicionar_opcoes(capitulo)
+
+    def adicionar_opcoes(self, capitulo):
+        # Limpa as opções anteriores
+        for widget in janela.winfo_children():
+            if isinstance(widget, Button):
+                widget.destroy()
+
+        # Adiciona botões de escolha com base no capítulo
+        opcoes = {
+            1: [
+                ("1 - Eu aceito, irei e voltarei com a joia e a vitória em mãos.", 1),
+                ("2 - Fale-me mais sobre?", 2),
+                ("3 - Nem ferrando, pelo menos não sem uma gorda recompensa.", 3),
+                ("4 - Inventário", 4)
+            ],
+            2: [
+                ("1 - Um anunciante no porto, me guiou para cá.", 1),
+                ("2 - Fale-me mais sobre tais audiências.", 2),
+                ("3 - Não imagina, eu vim para papear com você.", 3),
+                ("4 - Inventário", 4)
+            ]
+            # Continue adicionando opções para os outros capítulos conforme necessário
+        }
+
+        for texto, escolha in opcoes.get(capitulo, []):
+            Button(janela, text=texto, command=lambda e=escolha: self.fazer_escolha(e)).pack(pady=10)
+
+    def fazer_escolha(self, escolha):
+        # Chama a função de escolha correspondente do módulo escolha
+        if self.capituloatual in [1, 2]:
+            escolha_func = getattr(escolha, f'escolha{escolha}', None)
+            if escolha_func:
+                escolha_func(self.jogador)
+
+        # Atualiza o estado do jogo após a escolha
+        self.karma = escolha.karma  # Atualiza o karma
+        self.mochila = escolha.mochila  # Atualiza a mochila
+        self.capituloatual += 1  # Avança para o próximo capítulo
+        self.exibircapitulo(self.capituloatual)  # Exibe o próximo capítulo
+
+    def mostrar_inventario(self):
+        # Exibe o inventário do jogador
+        inventario_texto = "Inventário:\n" + "\n".join(self.mochila) if self.mochila else "Inventário vazio."
+        messagebox.showinfo("Inventário", inventario_texto)
+
+    def sair(self):
+        janela.destroy()  # Fecha a janela do jogo
+
+    def inicializartela(self):
+        # Limpa a tela atual
+        for widget in janela.winfo_children():
+            widget.destroy()
+
+        # Configurações da tela inicial
+        janela.title("A Aventura")
+        janela.geometry("800x600")
+        janela.configure(bg="black")
+
+        # Título do jogo
+        titulo = Label(janela, text="Medieval Self Adventure", bg="black", fg="green", font=("Courier", 40))
+        titulo.pack(pady=5)
+
+        # Subtítulo do jogo
+        subtitulo = Label(janela, text="An Izac de Paula Game", bg="black", fg="green", font=("Courier", 20))
+        subtitulo.pack(pady=10)
+
+        # Botão para iniciar um novo jogo
+        botaonovojogo = Button(janela, text="Novo Jogo", command=self.novojogo, bg="black", fg="green", highlightbackground="black")
+        botaonovojogo.pack(pady=20)
+
+        # Botão para carregar um jogo salvo
+        botaocarregarjogo = Button(janela, text="Carregar Jogo", command=self.carregarjogo, bg="black", fg="green", highlightbackground="black")
+        botaocarregarjogo.pack(pady=20)
+
+        # Botão para sair do jogo
+        botaosair = Button(janela, text="Sair", command=self.sair, bg="black", fg="green", highlightbackground="black")
+        botaosair.pack(pady=20)
+
+    def carregarjogo(self):
+        # Implementar a lógica para carregar um jogo salvo
+        pass
+
+# Inicializa a janela principal
+janela = Tk()
+jogo = Jogo()
+jogo.inicializartela()  #

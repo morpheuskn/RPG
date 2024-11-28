@@ -186,13 +186,13 @@ Você Ouve:
 Natasha: O seu sacrificio, não será esquecido.
 Você: Natasha, se algo assim acontecer nos futuro, guie o proximo assim como me guiou.
 Natasha: Eu prometo.
-Ao colocar a joia, você é levado a um espaço branco. Lá você vê Astaroth. Sem pensar muito você parte para lutar com ela pela eternidade.
+Ao colocar a joia, você é levado a um espaço branco. Lá você vê Astaroth. Sem pensar muito você parte para lutar com ela pelo tempo que conseguir.
 FIM !"""
 
 finalmaisoumenos = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,
-você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que mesmo após a ultima batalha ela
-por um milagre permanece viva. Você vê a joia em sua testa e parte para retira-la e por na sua.
-Ao colocar a joia, você é levado a um espaço branco. Lá você vê Astaroth. Sem pensar muito você parte para lutar com ela pela eternidade.
+você triunfa sobre o mal. Logo a sua frente você vê o corpo da princesa caido no chão, você percebe que após a batalha feroz ela não resistiu. 
+Você vê a joia em sua testa e parte para retira-la e por na sua. Ao colocar a joia, você é levado a um espaço branco. 
+Lá você vê Astaroth. Sem pensar muito você parte para lutar com ela pelo tempo que conseguir.
 FIM !"""
 
 finalruimlivro = """Após incontaveis obstaculos, você consegue chegar ao seu objetivo final. Com seu corpo inteiro encoberto por feridas,

@@ -214,24 +214,24 @@ class Jogo:
         
            case 1:
                karma += 2
-            pass  # Exemplo: escolha.atualizar_karma(1 elif opcao == 2:
+               pass  # Exemplo: escolha.atualizar_karma(1 elif opcao == 2:
         
-        case 2:
-            karma += 0
-            pass  # Exemplo: escolha.atualizar_karma(0)
-        
-        case 3:
-            karma += -2
-            pass  # Exemplo: escolha.atualizar_karma(-1)
-        case 4:
-            p.mostrarmochila(item)  # Mostra o inventário do jogador
+           case 2:
+                karma += 0
+                pass  # Exemplo: escolha.atualizar_karma(0)
+
+           case 3:
+                karma += -2
+                pass  # Exemplo: escolha.atualizar_karma(-1)
+           case 4:
+                p.mostrarmochila(item)  # Mostra o inventário do jogador
         self.capituloatual = proximocapitulo  # Atualiza o capítulo atual
         self.exibircapitulo(self.capituloatual)  # Exibe o próximo capítulo
 
     def carregarjogo(self):
         # Função para carregar um jogo salvo
         try:
-            self.jogador = carregarjogo()  # Tenta carregar o jogo salvo
+            self.jogador = s.carregarjogo()  # Tenta carregar o jogo salvo
             if self.jogador:
                 messagebox.showinfo("Carregar Jogo", f"Jogo carregado: {nome}")  # Mensagem de sucesso
                 self.iniciarhistoria()  # Inicia a história a partir do ponto salvo
@@ -277,4 +277,3 @@ class Jogo:
 janela = Tk()
 jogo = Jogo()  # Cria uma instância da classe Jogo
 jogo.inicializartela()  # Inicializa a tela do jogo
-print (karma)
