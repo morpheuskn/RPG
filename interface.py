@@ -1,11 +1,11 @@
-# Importa as bibliotecas necessárias
-from tkinter import *
-from tkinter import messagebox, ttk
-import random as r
-import personagem as p  # Importa o módulo de personagens
-import salvamento as s  # Importa o módulo de salvamento de jogo
-import historia as h    # Importa o módulo de história
-import combates as c    # Importa o módulo de combates
+# Importa os módulos necessários para o jogo
+from tkinter import * # Importa o módulo Tkinter
+from tkinter import messagebox, ttk # Importa do módulo Tkinter as funções Messadebox e Ttk
+import random as r # Importa o módulo de personagens como r
+import personagem as p  # Importa o módulo de personagens como p
+import salvamento as s  # Importa o módulo de salvamento de jogo como s
+import historia as h    # Importa o módulo de história como h
+import combates as c    # Importa o módulo de combates como c
 
 # Classe que gerencia as escolhas do jogador
 class Escolha:
@@ -464,7 +464,8 @@ class Jogo:
         # Configurações da tela inicial
         self.janela.title("A Aventura")  # Define o título da janela
         self.janela.geometry("800x600")  # Define o tamanho da janela
-        self.janela.configure(bg="black")  # Define a cor de fundo ```python
+        self.janela.configure(bg="black")  # Define a cor de fundo
+        
         # Título do jogo
         titulo = Label(self.janela, text="Medieval Self Adventure", bg="black", fg="green", font=("Courier", 40))
         titulo.pack(pady=5)

@@ -1,26 +1,26 @@
 # Importa os módulos necessários para o jogo
 import personagem as p  # Módulo que lida com a criação e manipulação de personagens
 import salvamento as s   # Módulo que lida com salvar e carregar jogos
-import historia as h     # Módulo que pode lidar com a narrativa do jogo (não utilizado aqui)
-import escolha as e      # Módulo que lida com as escolhas do jogador
-
+import escolha as e # Módulo que lida com as escolhas do jogador
+from colorama import Fore # Importa a função Fore do módulo colorama
+item ="Poção de Cura"
 # Função que exibe o menu principal do jogo
 def menu():
-    print("A Aventura")  # Título do jogo
-    print("An Izac de Paula Game")  # Nome do criador do jogo
-    print("Bem Vindo ao Menu inicial")  # Mensagem de boas-vindas
-    print("Escolha uma das Opções")  # Instrução para o jogador
-    print("1 - Novo Jogo")  # Opção para iniciar um novo jogo
-    print("2 - Carregar Jogo")  # Opção para carregar um jogo salvo
-    print("3 - Sair")  # Opção para sair do jogo
+    print(Fore.GREEN + "Medieval Self Adventure")  # Título do jogo
+    print(Fore.GREEN +"An Izac de Paula Game")  # Nome do criador do jogo
+    print(Fore.GREEN +"Bem Vindo ao Menu inicial")  # Mensagem de boas-vindas
+    print(Fore.GREEN +"Escolha uma das Opções")  # Instrução para o jogador
+    print(Fore.GREEN +"1 - Novo Jogo")  # Opção para iniciar um novo jogo
+    print(Fore.GREEN +"2 - Carregar Jogo")  # Opção para carregar um jogo salvo
+    print(Fore.GREEN +"3 - Sair")  # Opção para sair do jogo
 
     while True:  # Loop para garantir que o jogador insira uma opção válida
         try:
-            escolha = int(input("Digite a Opção Desejada: "))  # Solicita a escolha do jogador
+            escolha = int(input(Fore.GREEN +"Digite a Opção Desejada: "))  # Solicita a escolha do jogador
             break  # Sai do loop se a entrada for válida
         
         except ValueError:  # Se a entrada não for um número
-            print("Por favor, digite um número válido.")  # Solicita uma nova entrada
+            print(Fore.GREEN +"Por favor, digite um número válido.")  # Solicita uma nova entrada
 
     # Estrutura de controle para lidar com a escolha do jogador
     match escolha:
@@ -40,11 +40,11 @@ def menu():
                 e.escolha1(jogador)  # Chama a função de escolhas para o jogador
         
         case 3:  # Se o jogador escolher a opção 3
-            print("Saindo do jogo. Até a próxima!")  # Mensagem de despedida
+            print(Fore.GREEN +"Saindo do jogo. Até a próxima!")  # Mensagem de despedida
             exit()  # Encerra o programa
         
         case _:  # Para qualquer outra opção inválida
-            print("Opção inválida. Tente novamente.")  # Solicita que o jogador tente novamente
+            print(Fore.GREEN +"Opção inválida. Tente novamente.")  # Solicita que o jogador tente novamente
 
 # Chama a função menu para iniciar o jogo
 menu()

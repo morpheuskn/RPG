@@ -106,7 +106,7 @@ Sorte sua que me selei neste livro para ajudar os próximos com a tarefa.
 Quanto à princesa, se ele perceber que pode se selar em alguém que não resista, poderá assumir um corpo físico novinho em folha. 
 Você: E como podemos detê-la? 
 Natasha: Mate ou prenda. 
-Você: E como se mata ele? 
+Você: E como se mata ela? 
 Natasha: Quando ela tomar o corpo da princesa, estará vulnerável nas primeiras horas.
 É sua chance. 
 Você: E a princesa? 

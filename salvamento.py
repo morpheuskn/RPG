@@ -1,3 +1,4 @@
+# Importa os módulos necessários para o jogo
 import json  # Importa a biblioteca json para manipulação de dados em formato JSON
 import os  # Importa a biblioteca os para interagir com o sistema operacional, como verificar a existência de arquivos
 
