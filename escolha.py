@@ -3,6 +3,7 @@ import historia as h  # Importa o módulo 'historia' como 'h'
 import personagem as p  # Importa o módulo 'personagem' como 'p'
 import combates as c  # Importa o módulo 'combates' como 'c'
 from colorama import Fore # Importa a função Fore do módulo colorama
+import time as t
 
 karma = 0  # Inicializa a variável karma com 0
 
@@ -11,6 +12,7 @@ mochila = []  # Inicializa a mochila como uma lista vazia
 def atualizarkarma(valor):
     global karma  # Declara que vamos usar a variável global karma
     karma += valor  # Atualiza o karma com o valor recebido
+
 
 def escolha1(jogador):
     print(Fore.GREEN + h.capitulo1)  # Exibe o primeiro capítulo da história
@@ -23,7 +25,7 @@ def escolha1(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha1(jogador)
         return
 
@@ -32,6 +34,8 @@ def escolha1(jogador):
             print(Fore.GREEN + """Anunciante Real: Que discurso heroico, que suas palavras sejam verdades
 e que você volte com a vitoria em mãos""")
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha2(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Anunciante Real: Não há muito mais a se falar sobre. El'goroth era uma das nossas cidades mais belas, até um incidente
@@ -40,16 +44,20 @@ pensando em aceitar a tarefa viajante ?
 Você: Sim
 Anunciante Real: Então que a sorte lhe acompanhe.""")
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha2(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Anunciante Real: Aposte que haverá um mar de tesouros para aquele que completar ardua tarefa.
 Você: Então se é assim, que seja.""")
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha2(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -60,15 +68,15 @@ Você: Então se é assim, que seja.""")
                         break  # Sai do loop após encontrar o item
 
                 if not encontrado:  # Caso o item não seja encontrado
-                    print(Fore.GREEN + "Item não encontrado na mochila.")
+                    print(Fore.RED + "Item não encontrado na mochila.")
             except AttributeError as e:
-                print(Fore.GREEN + f"Erro relacionado a atributos: {e}")
+                print(Fore.RED + f"Erro relacionado aos atributos: {e}")
             except Exception as e:
-                print(Fore.GREEN + f"Ocorreu um erro ao usar o item: {e}")
+                print(Fore.RED + f"Erro ao usar o item: {e}")
             finally:  # Exibe a mochila
                 escolha1(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha1(jogador)  # Chama a próxima escolha
 
 def escolha2(jogador):
@@ -82,7 +90,7 @@ def escolha2(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha2(jogador)
         return
 
@@ -90,6 +98,8 @@ def escolha2(jogador):
         case 1:
             print(Fore.GREEN + """Guarda: Então venha comigo, mercenario.""")
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha3(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Guarda: Essas audiências, são momentos em que vossa ilustríssima majestade, ouve, delibera e
@@ -97,17 +107,21 @@ atende a pedidos da população. Veio para uma ?
 Você: Eu vim me candidatar, para ir para El'goroth.
 Guarda: Então venha comigo, mercenario.""")
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha3(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Guarda: Um engraçadinho, talvez fique menos engraçado passando uns tempos nos calabouços.
 Você: Eu vim para falar sobre El'goroth.
 Guarda: Venha mercenario.""")
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha3(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -118,15 +132,15 @@ Guarda: Venha mercenario.""")
                         break  # Sai do loop após encontrar o item
 
                 if not encontrado:  # Caso o item não seja encontrado
-                    print(Fore.GREEN + "Item não encontrado na mochila.")
+                    print(Fore.RED + "Item não encontrado na mochila.")
             except AttributeError as e:
-                print(Fore.GREEN + f"Erro relacionado a atributos: {e}")
+                print(Fore.RED + f"Erro relacionado aos atributos: {e}")
             except Exception as e:
-                print(Fore.GREEN + f"Ocorreu um erro ao usar o item: {e}")
+                print(Fore.RED + f"Erro ao usar o item: {e}")
             finally:  # Exibe a mochila
                 escolha2(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha2(jogador)  # Chama a próxima escolha
 
 def escolha3(jogador):
@@ -140,7 +154,7 @@ def escolha3(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha3(jogador)
         return
 
@@ -149,6 +163,8 @@ def escolha3(jogador):
             print(Fore.GREEN + """Rei Dio: Pois bem heroi, lhe daremos um cavalo e a bênção real. Vá e traga minha filha.""")
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha4(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Rei Dio: Um castelo, um título ducal e muito ouro.
@@ -156,17 +172,21 @@ Você: Eu aceito.
 Rei Dio: Pois bem, lhe daremos um cavalo e a bênção real. Vá e traga minha filha.""")
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha4(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Rei Dio: Um homem movido a ouro e glórias.
 Pois bem, lhe daremos um cavalo e a bênção real. Vá e traga minha filha.""")
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha4(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -185,7 +205,7 @@ Pois bem, lhe daremos um cavalo e a bênção real. Vá e traga minha filha.""")
             finally:
                 escolha3(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha3(jogador)  # Chama a próxima escolha
 
 def escolha4(jogador):
@@ -199,7 +219,7 @@ def escolha4(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha4(jogador)
         return
 
@@ -212,10 +232,14 @@ Esidisi: Quem é você ?
 Você: Eu sou o mercenário enviado pelo rei, para resolver a questão de El'goroth.
 Santana: Esidisi, deixe esse homem passar. Alguém que aceita uma tarefa dessas é muito poderoso ou muito louco. De qualquer forma, não vale a pena.""")
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha5(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você utiliza uma trilha em meio a floresta para contornar o cerco bandido e consegue.""")
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha5(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você parte para cima dos quatro bandidos.""")
@@ -229,11 +253,13 @@ Santana: Esidisi, deixe esse homem passar. Alguém que aceita uma tarefa dessas 
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha5(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -252,7 +278,7 @@ Santana: Esidisi, deixe esse homem passar. Alguém que aceita uma tarefa dessas 
             finally:
                 escolha4(jogador)
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha4(jogador)  # Chama a próxima escolha
 
 def escolha5(jogador):
@@ -268,7 +294,7 @@ def escolha5(jogador):
         try:
             resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
         except ValueError:
-            print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+            print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
             continue  # Retorna ao início do loop
 
         match resposta:  # Verifica a resposta do jogador
@@ -294,13 +320,15 @@ que elas foram quebradas por magia poderosa e força imensa.""")
                 repeticao += 4  # Aumenta a contagem de repetições
                 atualizarkarma(0)  # Não altera o karma
             case _:
-                print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+                print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
 
         if repeticao >= 10:  # Se a contagem de repetições atingir 10
             print (Fore.GREEN + """Você percebe que os adversários dos soldados eram coisas
 que não eram desse mundo, com magia e força fora do comum.
 Tudo leva a crer que eles voltaram para El'goroth.""")
             break  # Sai do loop
+    t.sleep(5)
+    print("\033c", end="")
     escolha6(jogador)  # Chama a próxima escolha
 
 def escolha6(jogador):
@@ -314,7 +342,7 @@ def escolha6(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha6(jogador)
         return
 
@@ -331,21 +359,27 @@ def escolha6(jogador):
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha7(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você rapidamente se esconde no alto de uma árvore próxima,
 até que os cães vão embora. Depois disso você desce e segue o seu caminho.""")
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha7(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você rapidamente corre, os cães correm atrás. Mas você
 consegue os despistar. Depois disso você desce e segue o seu caminho.""")
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha7(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -364,7 +398,7 @@ consegue os despistar. Depois disso você desce e segue o seu caminho.""")
             finally:
                 escolha6(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha6(jogador)  # Chama a próxima escolha
 
 def escolha7(jogador):
@@ -378,7 +412,7 @@ def escolha7(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha7(jogador)
         return
 
@@ -386,20 +420,26 @@ def escolha7(jogador):
         case 1:
             print(Fore.GREEN + """Você segue o vulto, mas ele desaparece em frente a uma estante.""")
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha8(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você vai avançando por outro corredor e acaba em frente a uma estante.""")
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha8(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você tenta fugir, mas acaba entrando mais na biblioteca.
 E para em frente a uma estante.""")
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha8(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -418,7 +458,7 @@ E para em frente a uma estante.""")
             finally:
                 escolha7(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha7(jogador)  # Chama a próxima escolha
 
 def escolha8(jogador):
@@ -432,7 +472,7 @@ def escolha8(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha8(jogador)
         return
 
@@ -440,21 +480,27 @@ def escolha8(jogador):
         case 1:
             print(Fore.GREEN + """Você chega mais e mais perto do livro. Você sente uma vontade irresistível de tocá-lo.""")
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha9(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você não consegue se conter e chega mais e mais perto do livro.
 Você sente uma vontade irresistível de tocá-lo.""")
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha9(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você não consegue se conter e chega mais e mais perto do livro.
 Você sente uma vontade irresistível de tocá-lo.""")
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha9(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -473,7 +519,7 @@ Você sente uma vontade irresistível de tocá-lo.""")
             finally:
                 escolha8(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha8(jogador)  # Chama a próxima escolha
 
 def escolha9(jogador):
@@ -487,7 +533,7 @@ def escolha9(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha9(jogador)
         return
 
@@ -495,21 +541,29 @@ def escolha9(jogador):
         case 1:
             print(Fore.GREEN + """Natasha: Finalmente você fez a pergunta correta.""")
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha10(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Natasha: Achei que tinha ficado óbvio já que eu acabei de dizer isso.""")
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha10(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Natasha: Ah é, vossa majestade senhor da comédia.""")
             atualizarkarma(-2)  # Dimin ui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha10(jogador)  # Chama a próxima escolha
         case 4:
             print(Fore.GREEN + """Natasha: Você não é muito inteligente, né.""")
             atualizarkarma(0)  # Não altera o karma
-            escolha9(jogador)  # Chama a próxima escolha
+            t.sleep(5)
+            print("\033c", end="")
+            escolha10(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha9(jogador)  # Chama a próxima escolha
 
 def escolha10(jogador):
@@ -523,7 +577,7 @@ def escolha10(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha10(jogador)
         return
 
@@ -533,21 +587,27 @@ def escolha10(jogador):
             p.adicionarmochila("Livro Mágico", mochila)  # Adiciona o livro mágico à mochila
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha11(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Natasha: Eu vi isso começar, e quero ver como termina.
 Você: Se é assim, sim.""")
             p.adicionarmochila("Livro Mágico", mochila)  # Adiciona o livro mágico à mochila
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha11(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Natasha: Você se arrependerá por isso.""")
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha11(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -567,7 +627,7 @@ Você: Se é assim, sim.""")
                 escolha10(jogador)  # Chama a próxima escolha
 
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha10(jogador)  # Chama a próxima escolha
 
 def escolha11(jogador):
@@ -581,7 +641,7 @@ def escolha11(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha11(jogador)
         return
 
@@ -590,6 +650,8 @@ def escolha11(jogador):
             print(Fore.GREEN + """Você ataca a criatura das sombras, um ataque meticulosamente calculado para acertar a cabeça""")
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha12(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você ataca a criatura frontalmente.""")
@@ -600,15 +662,19 @@ def escolha11(jogador):
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha12(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você se esconde da criatura, usando destroços como esconderijo. Até conseguir fugir dele.""")
             atualizarkarma (-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha12(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -627,7 +693,7 @@ def escolha11(jogador):
             finally:
                 escolha11(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha11(jogador)  # Chama a próxima escolha
 
 def escolha12(jogador):
@@ -641,7 +707,7 @@ def escolha12(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha12(jogador)
         return
 
@@ -655,6 +721,8 @@ def escolha12(jogador):
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha13(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Anung Un Rama: Para libertar a nossa irmã e trazer nosso mundo para o seu.
@@ -667,6 +735,8 @@ Anung Un Rama: Porque é a nossa natureza. Agora devemos lutar.""")
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha13(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Anung Un Rama: Um homem que trai a sua própria espécie, não é digno da nossa.""")
@@ -677,11 +747,13 @@ Anung Un Rama: Porque é a nossa natureza. Agora devemos lutar.""")
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha13(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -700,7 +772,7 @@ Anung Un Rama: Porque é a nossa natureza. Agora devemos lutar.""")
             finally:
                 escolha12(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha12(jogador)  # Chama a próxima escolha
 
 def escolha13(jogador):
@@ -714,7 +786,7 @@ def escolha13(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha13(jogador)
         return
 
@@ -728,21 +800,27 @@ def escolha13(jogador):
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha14(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você apaga a sua tocha, e faz barulhos atraindo as bestas. Quando elas correm atrás de você.
 Você começa a correr, atraindo as bestas em direção a Zodd""")
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha14(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você apaga a sua tocha, e sai correndo para trás de Zodd. Quando ele parte para te atacar,
 você derruba as paredes da caverna em cima de Zodd e suas bestas.""")
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha14(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -761,7 +839,7 @@ você derruba as paredes da caverna em cima de Zodd e suas bestas.""")
             finally:
                 escolha13(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha13(jogador)  # Chama a próxima escolha
 
 def escolha14(jogador):
@@ -775,7 +853,7 @@ def escolha14(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha14(jogador)
         return
 
@@ -789,6 +867,8 @@ def escolha14(jogador):
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha15(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Khan: Porque sim. Você se questiona quando mata formigas. Para nós vocês não passam
@@ -800,16 +880,20 @@ disso.""")
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha15(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você corre, prestes a ser atacado por Khan, você ataca as paredes em volta dele, 
                   fazendo com que parte do túnel desabe o soterrando.""")
             atualizarkarma(-2)  # Diminui o karma
+            t.sleep(5)
+            print("\033c", end="")
             escolha15(jogador)  # Chama a próxima escolha
         case 4:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 # Verifica se o item está na mochila
                 encontrado = False
                 for pertence in mochila:
@@ -828,7 +912,7 @@ disso.""")
             finally:
                 escolha14(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha14(jogador)  # Chama a próxima escolha
 
 def escolha15(jogador):
@@ -840,7 +924,7 @@ def escolha15(jogador):
     try:
         resposta = int(input(Fore.GREEN + "O que Você Fará ? "))  # Recebe a escolha do jogador
     except ValueError:
-        print(Fore.GREEN + "Entrada inválida. Por favor, insira um número.")
+        print(Fore.RED + "Entrada inválida. Por favor, insira um número.")
         escolha15(jogador)
         return
 
@@ -853,11 +937,13 @@ def escolha15(jogador):
                 print(Fore.GREEN + f"Ocorreu um erro durante o combate: {e}")
                 return
             atualizarkarma(0)  # Não altera o karma
+            t.sleep(5)
+            print("\033c", end="")
             final(jogador, karma, mochila)  # Chama a função final
         case 2:
             try:
                 p.mostrarmochila(mochila)  # Exibe a mochila
-                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar: ")
+                item = input(Fore.GREEN + "Digite o Nome do Item que quer Usar ou para sair digite Sair: ")
                 for pertence in mochila:
                     if item not in pertence:
                         print(Fore.GREEN + "Item não encontrado na mochila.")
@@ -872,7 +958,7 @@ def escolha15(jogador):
             finally:
                 escolha15(jogador)  # Chama a próxima escolha
         case _:
-            print(Fore.GREEN + "Opção inválida. Tente novamente.")  # Mensagem de erro
+            print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
             escolha15(jogador)  # Chama a próxima escolha
 
 def final(jogador, karma, mochila):

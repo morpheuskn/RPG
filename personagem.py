@@ -137,15 +137,7 @@ def mostrarmochila(mochila):
 import random as r  # Certifique-se de importar o módulo random
 
 def usaritem(item, mochila, atributos):
-    if not isinstance(mochila, list):  # Valida se mochila é uma lista
-        print(Fore.GREEN + "Erro: 'mochila' não é uma lista válida.")
-        return atributos, mochila
-
     for objeto in mochila:
-        if not isinstance(objeto, list) or len(objeto) < 2:  # Valida se cada item é uma lista com pelo menos dois elementos
-            print(Fore.GREEN + f"Erro: Um dos itens na mochila não está no formato esperado: {objeto}")
-            continue
-
         if objeto[0] == item:  # Verifica o nome do item
             if item == "Poção de Cura":  # Verifica se é uma Poção de Cura
                 if objeto[1] > 0:  # Confirma se há quantidade suficiente
@@ -157,8 +149,10 @@ def usaritem(item, mochila, atributos):
                         mochila.remove(objeto)
                 else:
                     print(Fore.GREEN + f"Você não tem mais {item} disponível.")
+            elif item == "Sair":
+                break
             else:
-                print(Fore.GREEN + f"O item '{item}' não pode ser usado ou não é funcional.")
+                print(Fore.GREEN + f"O item '{item}' não pode ser usado.")
             return atributos, mochila  # Retorna os valores atualizados
 
     print(Fore.GREEN + f"O item '{item}' não está na mochila.")  # Mensagem caso o item não seja encontrado
