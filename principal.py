@@ -32,18 +32,18 @@ def menu():
             atributos = p.atributos(raca, classe)  # Define os atributos com base na raça e classe
             jogador = p.jogador(nome, raca, classe, atributos)  # Cria um objeto jogador
             s.salvarjogo(jogador)  # Salva o jogo
-            print("\033c", end="")
-            t.sleep(2)
+            print("\033c", end="") # Limpa o console
+            t.sleep(2) # Cria um delay de 2 segundos
             e.escolha1(jogador)  # Chama a função de escolhas para o jogador
             menu()  # Retorna ao menu após a escolha
         case 2:  # Se o jogador escolher a opção 2
             jogador = s.carregarjogo()  # Tenta carregar um jogo salvo
             if jogador:  # Se o carregamento for bem-sucedido
                 print(f"Jogo carregado: {jogador}")  # Exibe informações do jogador carregado
-                print("\033c", end="")
-                t.sleep(2)
+                print("\033c", end="") # Limpa o console
+                t.sleep(2) # Cria um delay de 2 segundos
                 e.escolha1(jogador)  # Chama a função de escolhas para o jogador
-        
+                menu()
         case 3:  # Se o jogador escolher a opção 3
             print(Fore.GREEN +"Saindo do jogo. Até a próxima!")  # Mensagem de despedida
             exit()  # Encerra o programa
