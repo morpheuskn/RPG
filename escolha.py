@@ -74,10 +74,10 @@ Você: Então se é assim, que seja.""")
             except Exception as e:
                 print(Fore.RED + f"Erro ao usar o item: {e}")
             finally:  # Exibe a mochila
-                escolha1(jogador)  # Chama a próxima escolha
+                escolha1(jogador)  # Chama a escolha atual
         case _:
             print(Fore.RED + "Opção inválida. Tente novamente.")  # Mensagem de erro
-            escolha1(jogador)  # Chama a próxima escolha
+            escolha1(jogador)  # Chama a escolha atual
 
 def escolha2(jogador):
     print(Fore.GREEN + h.capitulo2)  # Exibe o segundo capítulo da história
