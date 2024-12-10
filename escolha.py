@@ -34,7 +34,7 @@ def escolha1(jogador):
             print(Fore.GREEN + """Anunciante Real: Que discurso heroico, que suas palavras sejam verdades
 e que você volte com a vitoria em mãos""")
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha2(jogador)  # Chama a próxima escolha
         case 2:
@@ -44,14 +44,14 @@ pensando em aceitar a tarefa viajante ?
 Você: Sim
 Anunciante Real: Então que a sorte lhe acompanhe.""")
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha2(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Anunciante Real: Aposte que haverá um mar de tesouros para aquele que completar ardua tarefa.
 Você: Então se é assim, que seja.""")
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha2(jogador)  # Chama a próxima escolha
         case 4:
@@ -98,7 +98,7 @@ def escolha2(jogador):
         case 1:
             print(Fore.GREEN + """Guarda: Então venha comigo, mercenario.""")
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha3(jogador)  # Chama a próxima escolha
         case 2:
@@ -107,7 +107,7 @@ atende a pedidos da população. Veio para uma ?
 Você: Eu vim me candidatar, para ir para El'goroth.
 Guarda: Então venha comigo, mercenario.""")
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha3(jogador)  # Chama a próxima escolha
         case 3:
@@ -115,7 +115,7 @@ Guarda: Então venha comigo, mercenario.""")
 Você: Eu vim para falar sobre El'goroth.
 Guarda: Venha mercenario.""")
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha3(jogador)  # Chama a próxima escolha
         case 4:
@@ -163,7 +163,7 @@ def escolha3(jogador):
             print(Fore.GREEN + """Rei Dio: Pois bem heroi, lhe daremos um cavalo e a bênção real. Vá e traga minha filha.""")
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha4(jogador)  # Chama a próxima escolha
         case 2:
@@ -172,7 +172,7 @@ Você: Eu aceito.
 Rei Dio: Pois bem, lhe daremos um cavalo e a bênção real. Vá e traga minha filha.""")
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha4(jogador)  # Chama a próxima escolha
         case 3:
@@ -180,7 +180,7 @@ Rei Dio: Pois bem, lhe daremos um cavalo e a bênção real. Vá e traga minha f
 Pois bem, lhe daremos um cavalo e a bênção real. Vá e traga minha filha.""")
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha4(jogador)  # Chama a próxima escolha
         case 4:
@@ -232,13 +232,13 @@ Esidisi: Quem é você ?
 Você: Eu sou o mercenário enviado pelo rei, para resolver a questão de El'goroth.
 Santana: Esidisi, deixe esse homem passar. Alguém que aceita uma tarefa dessas é muito poderoso ou muito louco. De qualquer forma, não vale a pena.""")
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha5(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você utiliza uma trilha em meio a floresta para contornar o cerco bandido e consegue.""")
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha5(jogador)  # Chama a próxima escolha
         case 3:
@@ -253,7 +253,7 @@ Santana: Esidisi, deixe esse homem passar. Alguém que aceita uma tarefa dessas 
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha5(jogador)  # Chama a próxima escolha
         case 4:
@@ -327,7 +327,7 @@ que elas foram quebradas por magia poderosa e força imensa.""")
 que não eram desse mundo, com magia e força fora do comum.
 Tudo leva a crer que eles voltaram para El'goroth.""")
             break  # Sai do loop
-    t.sleep(5) # Cria um delay de 2 segundos
+    t.sleep(5)
     print("\033c", end="") # Limpa o console
     escolha6(jogador)  # Chama a próxima escolha
 
@@ -359,21 +359,21 @@ def escolha6(jogador):
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha7(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você rapidamente se esconde no alto de uma árvore próxima,
 até que os cães vão embora. Depois disso você desce e segue o seu caminho.""")
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha7(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você rapidamente corre, os cães correm atrás. Mas você
 consegue os despistar. Depois disso você desce e segue o seu caminho.""")
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha7(jogador)  # Chama a próxima escolha
         case 4:
@@ -420,20 +420,20 @@ def escolha7(jogador):
         case 1:
             print(Fore.GREEN + """Você segue o vulto, mas ele desaparece em frente a uma estante.""")
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha8(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você vai avançando por outro corredor e acaba em frente a uma estante.""")
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha8(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você tenta fugir, mas acaba entrando mais na biblioteca.
 E para em frente a uma estante.""")
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha8(jogador)  # Chama a próxima escolha
         case 4:
@@ -480,21 +480,21 @@ def escolha8(jogador):
         case 1:
             print(Fore.GREEN + """Você chega mais e mais perto do livro. Você sente uma vontade irresistível de tocá-lo.""")
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha9(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você não consegue se conter e chega mais e mais perto do livro.
 Você sente uma vontade irresistível de tocá-lo.""")
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha9(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você não consegue se conter e chega mais e mais perto do livro.
 Você sente uma vontade irresistível de tocá-lo.""")
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha9(jogador)  # Chama a próxima escolha
         case 4:
@@ -541,25 +541,25 @@ def escolha9(jogador):
         case 1:
             print(Fore.GREEN + """Natasha: Finalmente você fez a pergunta correta.""")
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha10(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Natasha: Achei que tinha ficado óbvio já que eu acabei de dizer isso.""")
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha10(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Natasha: Ah é, vossa majestade senhor da comédia.""")
             atualizarkarma(-2)  # Dimin ui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha10(jogador)  # Chama a próxima escolha
         case 4:
             print(Fore.GREEN + """Natasha: Você não é muito inteligente, né.""")
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha10(jogador)  # Chama a próxima escolha
         case _:
@@ -587,7 +587,7 @@ def escolha10(jogador):
             p.adicionarmochila("Livro Mágico", mochila)  # Adiciona o livro mágico à mochila
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha11(jogador)  # Chama a próxima escolha
         case 2:
@@ -595,13 +595,13 @@ def escolha10(jogador):
 Você: Se é assim, sim.""")
             p.adicionarmochila("Livro Mágico", mochila)  # Adiciona o livro mágico à mochila
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha11(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Natasha: Você se arrependerá por isso.""")
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha11(jogador)  # Chama a próxima escolha
         case 4:
@@ -650,7 +650,7 @@ def escolha11(jogador):
             print(Fore.GREEN + """Você ataca a criatura das sombras, um ataque meticulosamente calculado para acertar a cabeça""")
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha12(jogador)  # Chama a próxima escolha
         case 2:
@@ -662,13 +662,13 @@ def escolha11(jogador):
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha12(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você se esconde da criatura, usando destroços como esconderijo. Até conseguir fugir dele.""")
             atualizarkarma (-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha12(jogador)  # Chama a próxima escolha
         case 4:
@@ -721,7 +721,7 @@ def escolha12(jogador):
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha13(jogador)  # Chama a próxima escolha
         case 2:
@@ -735,7 +735,7 @@ Anung Un Rama: Porque é a nossa natureza. Agora devemos lutar.""")
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha13(jogador)  # Chama a próxima escolha
         case 3:
@@ -747,7 +747,7 @@ Anung Un Rama: Porque é a nossa natureza. Agora devemos lutar.""")
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha13(jogador)  # Chama a próxima escolha
         case 4:
@@ -800,21 +800,21 @@ def escolha13(jogador):
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha14(jogador)  # Chama a próxima escolha
         case 2:
             print(Fore.GREEN + """Você apaga a sua tocha, e faz barulhos atraindo as bestas. Quando elas correm atrás de você.
 Você começa a correr, atraindo as bestas em direção a Zodd""")
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha14(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você apaga a sua tocha, e sai correndo para trás de Zodd. Quando ele parte para te atacar,
 você derruba as paredes da caverna em cima de Zodd e suas bestas.""")
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha14(jogador)  # Chama a próxima escolha
         case 4:
@@ -867,7 +867,7 @@ def escolha14(jogador):
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(2)  # Aumenta o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha15(jogador)  # Chama a próxima escolha
         case 2:
@@ -880,14 +880,14 @@ disso.""")
                 return
             p.adicionarmochila("Poção de Cura", mochila)
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha15(jogador)  # Chama a próxima escolha
         case 3:
             print(Fore.GREEN + """Você corre, prestes a ser atacado por Khan, você ataca as paredes em volta dele, 
                   fazendo com que parte do túnel desabe o soterrando.""")
             atualizarkarma(-2)  # Diminui o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             escolha15(jogador)  # Chama a próxima escolha
         case 4:
@@ -937,7 +937,7 @@ def escolha15(jogador):
                 print(Fore.GREEN + f"Ocorreu um erro durante o combate: {e}")
                 return
             atualizarkarma(0)  # Não altera o karma
-            t.sleep(5) # Cria um delay de 2 segundos
+            t.sleep(5) # Cria um delay de 5 segundos
             print("\033c", end="") # Limpa o console
             final(jogador, karma, mochila)  # Chama a função final
         case 2:
