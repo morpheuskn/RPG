@@ -1,5 +1,6 @@
 import random as r  # Importa a biblioteca random e a renomeia como r para gerar números aleatórios
 from colorama import Fore # Importa a função Fore do módulo colorama
+
 # Função para lidar com a morte do jogador
 def morte():
     print(Fore.GREEN + "Você Morreu")
