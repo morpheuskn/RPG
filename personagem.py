@@ -1,6 +1,7 @@
 import random as r  # Importa a biblioteca random e a renomeia como r para gerar números aleatórios
 from colorama import Fore # Importa a função Fore do módulo colorama
 # Função para solicitar e retornar o nome do personagem
+
 def nome():
     nomepersonagem = input(Fore.GREEN + "Digite o Nome do Personagem: ")  # Pede ao usuário para digitar o nome
     return nomepersonagem  # Retorna o nome digitado
